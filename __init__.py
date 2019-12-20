@@ -1,1 +1,1 @@
-from PasswordGen.PasswordGen import PasswordGen
+from spassgen.spassgen import PasswordGen

@@ -1,7 +1,7 @@
 from distutils.core import setup
 setup(
-  name = 'PasswordGen',
-  packages = ['PasswordGen'],   
+  name = 'spassgen',
+  packages = ['spassgen'],   
   version = '0.1',      
   license='MIT',
   description = 'A Simple Secure Password Generator',
