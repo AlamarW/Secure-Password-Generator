@@ -8,7 +8,7 @@ setup(
   author = 'AlamarW',
   author_email = 'alamardevel@gmail.com',
   url = 'https://github.com/AlamarW/Secure-Password-Generator',   
-  download_url = 'https://github.com/AlamarW/Secure-Password-Generator/archive/v_01.tar.gz',
+  download_url = 'https://github.com/AlamarW/Secure-Password-Generator/archive/V_02.tar.gzz',
   keywords = ['PASSWORD','RANDOM','GENERATOR'],
   install_requires=[],
   classifiers=[
