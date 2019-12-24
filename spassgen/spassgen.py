@@ -1,4 +1,4 @@
-import random
+import secrets
 import string
 import re
 
@@ -76,7 +76,7 @@ class PasswordGen:
             """Generates a list of random Upper Case letters to the length of pass_len"""
             upper_list = []
             for n in range(0, self.pass_len):
-                random_upper = random.choice(string.ascii_uppercase)
+                random_upper = secrets.choice(string.ascii_uppercase)
                 upper_list.append(random_upper)
             return upper_list
 
@@ -84,15 +84,16 @@ class PasswordGen:
             """Generates a list of random Lower Case letters to the length of pass_len"""
             lower_list = []
             for n in range(0, self.pass_len):
-                    random_lower = random.choice(string.ascii_lowercase)
-                    lower_list.append(random_lower)
+                random_lower = secrets.choice(string.ascii_lowercase)
+                lower_list.append(random_lower)
             return lower_list
 
         def random_integer(self):
             """Generates a list of random integers to the length of pass_len"""
             int_list = []
             for n in range(0, self.pass_len):
-                random_int = random.randint(0,9)
+                secretsGenerator = secrets.SystemRandom()
+                random_int = secretsGenerator.randint(0,9)
                 int_list.append(str(random_int))
             return int_list
             
@@ -102,7 +103,7 @@ class PasswordGen:
             choices = ['!','@','$','%','&','*','?']
             symbol_list = []
             for n in range(0, self.pass_len):
-                random_symbol = random.choice(choices)
+                random_symbol = secrets.choice(choices)
                 symbol_list.append(random_symbol)
             return symbol_list
                 
@@ -124,7 +125,7 @@ class PasswordGen:
 
             password =''
             for n in range(0, self.pass_len):
-                choice = random.choice(combined_list)
+                choice = secrets.choice(combined_list)
                 password += choice
             return password
 
@@ -144,4 +145,10 @@ class PasswordGen:
                 return password
             else:
                 return generate_password(self)
-                
+
+    def generate_many(self, count):
+        """Generates a user definied number of passwords and stores them in a list"""
+        passwords = []
+        for i in range(0, count):
+            passwords.append(PasswordGen.generate(self))
+        return passwords
