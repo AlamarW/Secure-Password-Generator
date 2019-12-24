@@ -1,0 +1,4 @@
+# dont track the content of these files and folders
+
+MANIFEST
+dist/
