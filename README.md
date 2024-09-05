@@ -26,6 +26,3 @@ I plan on making a generate_many function that generates a user specified amount
 
 Password storage?
 Make a local storage so that PasswordGen doesn't generate the same password twice, of course there're problems with this, so we'll see.
-
-# I'm Open To Suggestions!
-If you have any recommendations for spassgen, feel free to email me at alamardevel@gmail.com!
